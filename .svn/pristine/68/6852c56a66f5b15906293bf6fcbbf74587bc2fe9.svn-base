@@ -1,0 +1,11 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <TextView
+        android:id="@+id/spec_title_row"
+        android:paddingLeft="10dp"
+        android:layout_span="4"
+        android:background="@color/backgroud_color"
+        android:gravity="left"
+        android:textSize="18sp" />
+
+</TableRow>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0E76BD</color>
+    <color name="orange">#FFFF7430</color>
+    <color name="top_blue">#0e76bc</color>
+    <color name="glass_green">#51890a</color>
+    <color name="buttom_blue">#afdefe</color>
+    <color name="transparent">#00000000</color>
+    <color name="huise">#ffd7d7d7</color>
+    <color name="bg_orderdetail">#ffececec</color>
+    <color name="index_time">#ffababab</color>
+    <color name="red">#ff0000</color>
+    <color name="bottom">#FF797979</color>
+    <color name="item_title">#FF505050</color>
+    <color name="login_top_color">#FF9eb7ce</color>
+    <color name="login_keep_color">#FF47a8b8</color>
+    <color name="login_btn_color">#FF59c5d2</color>
+    <color name="login_name_color">#FF59c5d2</color>
+    <color name="login_count_color">#FF84ff00</color>
+    <color name="order_detail_color">#9acced</color>
+    <color name="detail_spec_color">#b79a90</color>
+
+
+
+    <color name="light_orange">#ffc904</color>
+
+    <color name="light_gray">#e1e1e1</color>
+    <color name="dark_orange">#823100</color>
+    <color name="dark_gray">#5f5f5f</color>
+    <color name="dark_red">#830900</color>
+    <color name="light_red">#b20c00</color>
+
+    
+
+    <color name="afterpay">#ffcf9a</color>
+    <color name="prepay">#b8e9ff</color>
+    <color name="payticket">#ddf781</color>
+    <color name="light_blue">#12ace2</color>
+    
+    <drawable name="orange">#ff6000</drawable>
+    <drawable name="light_gray">#e1e1e1</drawable>
+    <drawable name="dark_red">#830900</drawable>
+    <drawable name="light_red">#b20c00</drawable>
+ 	<drawable name="white">#FFFFFF</drawable>
+ 	<drawable name="light_yellow">#ffc904</drawable>
+ 	<drawable name="dark_yellow">#e17f00</drawable>
+ 	<drawable name="light_blue">#12ace2</drawable>
+ 	<drawable name="dark_blue">#0086b5</drawable>
+ 	<drawable name="after_gray">#c0bebe</drawable>
+ 	<drawable name="backgroud_color">#e9e1d6</drawable>
+	<color name="backgroud_color">#e9e1d6</color>
+	<color name="spec_content_bgcolor">#d9cdbd</color>
+	<color name="font_color">#763015</color>
+	<color name="not_for_pay_text_color">#7f7f7f</color>
+	<color name="splash_bgcolor">#5ba005</color>
+	<color name="white_line_bg">#d2c8bf</color>
+
+</resources>

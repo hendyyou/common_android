@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/my_dialog_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dip"
+        android:background="@drawable/subtract_num_selector" />
+
+    <EditText
+        android:id="@+id/my_dialog_edit_text"
+        android:layout_width="100dip"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dip"
+        android:gravity="center"
+        android:maxLength="3"
+        android:numeric="integer"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/my_dialog_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dip"
+        android:background="@drawable/add_num_selector" />
+
+</LinearLayout>

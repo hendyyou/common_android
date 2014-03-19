@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center"
+    android:orientation="horizontal"
+    android:paddingLeft="2dip"
+     >
+
+    <RadioButton
+        android:id="@+id/workbench_delivery_consigneed_rb"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        android:layout_gravity="center"       
+        android:button="@drawable/radio_btn"
+        android:gravity="left|center"
+        android:textColor="@color/font_color"
+        android:textSize="13sp" />
+
+</LinearLayout>

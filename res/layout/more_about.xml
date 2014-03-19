@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/more_about_ll"
+				android:background="@color/backgroud_color"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <com.digione.zgb2b.widget.TitleView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+    
+     <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="100dip"
+            android:layout_marginRight="30dip"
+            android:layout_marginLeft="30dip">
+            
+         <ImageView           
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/about_logo"
+			>
+        </ImageView>
+            
+         </LinearLayout>
+    
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dip"
+            android:layout_marginRight="30dip"
+            android:layout_marginLeft="30dip">
+
+		<TextView
+            android:id="@+id/customer_hotline_number_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/font_color"
+			android:textSize="12sp"
+			android:text="@string/customer_hotline_number_title" >
+        </TextView>
+
+        <TextView
+                android:id="@+id/more_about_version_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				android:textColor="@color/font_color"
+				android:textSize="12sp"
+                android:text="@string/version" >
+        </TextView>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				android:textColor="@color/font_color"
+				android:textSize="12sp"
+                android:text="@string/copyright">
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>

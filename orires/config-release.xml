@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="update_config_url">http://js.189b2b.com/download/apk_zgb2b_client_update.xml</string>
+    <string name="data_base_url">http://js.189b2b.com/</string>
+    <string name="provinceId">26</string>
+    <string name="provinceName">江苏省</string>
+    <string name="profile_padsize">10</string>
+    <string name="clould_url">json/android/product/productfind/0/listcote?cotedictId=574</string>
+    <string name="dev_mode">false</string>
+
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <com.digione.zgb2b.widget.TitleView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/workbench_order_time_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/workbench_order_nearest_month_rb"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/left_btn_after"
+            android:gravity="center"
+            android:text="@string/nearly_a_month_of_orders"
+            android:textColor="@color/font_color" />
+
+        <Button
+            android:id="@+id/workbench_order_previous_month_rb"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rigth_btn"
+            android:gravity="center"
+            android:text="@string/ago_a_month_of_orders"
+            android:textColor="@color/font_color" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/workbench_order_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/transparent"
+        android:listSelector="@color/transparent"
+        android:dividerHeight="10dip"        
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dip" >
+    </ListView>
+
+</LinearLayout>

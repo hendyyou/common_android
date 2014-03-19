@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@color/backgroud_color"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+
+        <com.digione.zgb2b.widget.TitleView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+
+        <!-- 修改闪烁问题 -->
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+        <ImageView
+                android:id="@+id/more_main_icon_iv"
+                android:layout_marginTop="10dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/password_lock"/>
+        <TableLayout android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:gravity="center">
+            <TableRow android:layout_marginTop="20dip"
+                      android:gravity="center">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center"
+                        android:text="@string/old_password"/>
+                <EditText
+                        android:id="@+id/workbench_old_password_et"
+                        android:layout_width="160dip"
+                        android:layout_height="40dip"
+                        android:background="@drawable/input_box_background"
+                        android:password="true"
+                        android:singleLine="true"/>
+            </TableRow>
+            <TableRow android:layout_marginTop="10dip"
+                      android:gravity="center">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center"
+                        android:text="@string/new_one_password"
+                        />
+                <EditText
+                        android:id="@+id/workbench_new_one_password_et"
+                        android:layout_width="160dip"
+                        android:layout_height="40dip"
+                        android:background="@drawable/input_box_background"
+                        android:password="true"
+                        android:paddingLeft="0dip"
+                        android:singleLine="true"/>
+            </TableRow>
+            <TableRow android:layout_marginTop="10dip"
+                      android:gravity="center">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center"
+                        android:text="@string/new_two_password"/>
+                <EditText
+                        android:id="@+id/workbench_new_two_password_et"
+                        android:layout_width="160dip"
+                        android:layout_height="40dip"
+                        android:background="@drawable/input_box_background"
+                        android:password="true"
+                        android:singleLine="true"/>
+            </TableRow>
+            <TableRow android:layout_marginTop="10dip"
+                      android:gravity="center">
+                <Button
+                        android:id="@+id/workbench_uppassword_submint_btn"
+                        android:background="@drawable/button_background"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:layout_width="70dip"
+                        android:layout_height="34dip"
+                        android:text="@string/submit"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

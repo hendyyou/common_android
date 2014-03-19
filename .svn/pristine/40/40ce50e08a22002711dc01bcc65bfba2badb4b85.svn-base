@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <com.digione.zgb2b.widget.TitleView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="34dip"
+            android:layout_marginTop="20dip"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/feedback_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/feedback_type" />
+
+                <Spinner
+                    android:id="@+id/more_feedback_type_sp"
+                    android:layout_width="165dip"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@id/feedback_type_tv"
+                    android:gravity="left|center_vertical"
+                    android:background="@drawable/dropcolor"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/feedback_type" />
+
+                <Button
+                    android:id="@+id/color_select_btn2"
+                    android:layout_width="35dip"
+                    android:layout_height="fill_parent"
+                    android:layout_toRightOf="@id/more_feedback_type_sp"
+                    android:background="@drawable/drop_select_background"
+                    android:gravity="center"
+                    android:onClick="@id/more_feedback_type_sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/feedback_context" />
+
+            <EditText
+                android:id="@+id/more_feedback_context_et"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip"
+                android:scrollbars="vertical"
+                android:background="@drawable/multiline_edit_background"
+                android:gravity="top"
+                android:minHeight="200dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/more_feedback_submit_btn"
+                style="@style/Button_background"
+                android:text="@string/submit" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="#e9e1d6"
+    android:fadingEdge="none"
+    android:scrollbarSize="0dip"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.digione.zgb2b.widget.TitleView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/shop_cart_body_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:layout_marginTop="6dip"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/shop_cart_address_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/bg_menu_selector"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/shop_cart_consig_info"
+                style="@style/shop_cart_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="@string/consig_info" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/shop_cart_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/consig_p" />
+
+                        <TextView
+                            android:id="@+id/shop_cart_consignee"
+                            style="@style/shop_cart_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dip" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/shop_cart_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mobile_number" />
+
+                        <TextView
+                            android:id="@+id/shop_cart_consMobile"
+                            style="@style/shop_cart_text"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dip"
+                            android:layout_weight="1" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/shop_cart_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/consig_addres" />
+
+                        <TextView
+                            android:id="@+id/shop_cart_consAddress"
+                            style="@style/shop_cart_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dip" >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="24dip"
+                    android:layout_height="24dip"
+                    android:layout_marginRight="8dip"
+                    android:background="@drawable/clickinto36px" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/shop_cart_invoice_type"
+            style="@style/shop_cart_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="6dip"
+            android:layout_marginTop="10dip"
+            android:text="@string/invoice_type_shop_cart" >
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="6dip"
+            android:layout_marginTop="2dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/shop_cart_invoiceTypeName"
+                style="@style/shop_cart_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vat_invoice" >
+            </TextView>
+			 <TextView
+				 android:id="@+id/shop_cart_invoiceTypeAddress"
+				 style="@style/shop_cart_text"
+				 android:layout_width="fill_parent"
+				 android:layout_height="wrap_content"
+				 android:text="@string/vat_invoice_address" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/shop_cart_pay_ll"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" />
+
+            <Button
+                android:id="@+id/shop_cart_pay_btn"
+                style="@style/Button_background"
+                android:layout_width="94dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="12dip"
+                android:gravity="center"
+                android:text="@string/go_pay" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

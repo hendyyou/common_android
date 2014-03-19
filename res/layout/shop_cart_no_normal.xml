@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e9e1d6"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <com.digione.zgb2b.widget.TitleView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center|top"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="160dip"
+            android:layout_height="138dip"
+            android:layout_gravity="center"
+            android:background="@drawable/shop_cart_no_data" />
+
+        <TextView
+            android:id="@+id/shop_cart_no_normal_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:lineSpacingExtra="5dip"
+            style="@style/shop_cart_text" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/shop_cart_no_normal_btn"
+                style="@style/Button_background"
+                android:layout_width="94dip"
+                android:layout_margin="8dip"
+                android:gravity="center"
+                android:text="@string/go_shop" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

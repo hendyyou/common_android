@@ -1,0 +1,8 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/spec_content_bgcolor"
+    android:shrinkColumns="1"
+    android:stretchColumns="1" >
+
+</TableLayout>

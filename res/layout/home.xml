@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/home_top_title_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="42dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/j_top"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="130dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dip"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="28dip"
+                android:layout_gravity="center|center_vertical"
+                android:background="@drawable/home_logo"
+                android:contentDescription="@string/user_lonig_title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_line_logo_load"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" 
+            android:orientation="horizontal"/>
+
+        <Button
+            android:id="@+id/home_load"
+            android:layout_width="60dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/home_btn_selector"
+            android:gravity="center"
+            android:text="@string/user_login"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" >
+        </Button>
+
+        <LinearLayout
+            android:id="@+id/search_btn"
+            android:layout_width="60dip"
+            android:layout_height="fill_parent"
+            android:background="@drawable/home_btn_selector"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/search"
+                android:contentDescription="@string/search"
+                android:gravity="center"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/home_renmen"
+        android:layout_width="fill_parent"
+        android:layout_height="100dip"
+        android:layout_alignParentBottom="true" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/home_renmen"
+        android:layout_below="@id/home_top_title_ll"
+        android:background="#6ba620"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/page2_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.digione.zgb2b.widget.MyGallery
+                    android:id="@+id/home_top_img"
+                    android:layout_width="fill_parent"
+                    android:layout_height="123dip"
+                    android:fadingEdge="none" />
+                <LinearLayout
+                    android:id="@+id/home_point_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|bottom"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="5dip"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#6ba620"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="27dip" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:clickable="false"
+                        android:gravity="center_vertical"
+                        android:text="@string/assign_product_title"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <com.digione.zgb2b.widget.MyGridView
+                    android:id="@+id/home_recommend"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:horizontalSpacing="7dip"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:paddingLeft="4dip"
+                    android:paddingRight="4dip"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="7dip" >
+                </com.digione.zgb2b.widget.MyGridView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

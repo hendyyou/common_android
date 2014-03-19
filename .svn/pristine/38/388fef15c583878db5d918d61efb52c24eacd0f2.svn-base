@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_mybaigong_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroud_color" >
+
+    <LinearLayout
+        android:id="@+id/ll_mybaigong_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.digione.zgb2b.widget.TitleView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 用户信息begin -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:orientation="horizontal"
+            android:paddingTop="8dip" >
+
+            <!-- 头像 -->
+
+            <ImageView
+                android:layout_width="57dip"
+                android:layout_height="50dip"
+                android:layout_marginLeft="15dip"
+                android:src="@drawable/member" />
+            <!-- 右边用户信息 -->
+
+            <LinearLayout
+                android:id="@+id/ll_mybaigong_infor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_weight="0.9"
+                android:orientation="vertical" >
+
+                <!-- 欢迎用户登录 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weclcome_hello_user"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/workbench_username_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weclcome_back"
+                        android:textSize="13sp" />
+                </LinearLayout>
+                <!-- 用户级别 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_level"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/workbench_userlevel_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="13sp" />
+                </LinearLayout>
+                <!-- 用户积分 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/last_logon_time"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/workbench_last_logon_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 用户信息end -->
+        <!-- 订单 begin -->
+
+        <LinearLayout
+            android:id="@+id/workbench_category_all_orders_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="38dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/workbench_category_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="5dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/workbench_category_point" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="left|center"
+                android:paddingLeft="10dip"
+                android:text="@string/all_orders" />
+
+            <ImageView
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:contentDescription="@string/app_name"
+                android:paddingRight="5dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/director_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/workbench_category_pending_payment_orders_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="38dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/workbench_category_bg"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="5dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/workbench_category_point" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="left|center"
+                android:paddingLeft="10dip"
+                android:text="@string/pending_payment_orders" />
+
+            <ImageView
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:contentDescription="@string/app_name"
+                android:paddingRight="5dip"
+                android:scaleType="centerInside"
+                android:src="@drawable/director_icon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/workwbottom"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/workbench_category_my_collection_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/workbench_category_bottombg"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/workbench_category_point" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dip"
+                    android:text="@string/my_collection" />
+
+                <ImageView
+                    android:layout_width="18dip"
+                    android:layout_height="18dip"
+                    android:layout_marginRight="3dip"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/director_icon" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/devider_line4" />
+
+            <LinearLayout
+                android:id="@+id/workbench_category_delivery_address_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/workbench_category_bottombg"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/workbench_category_point" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dip"
+                    android:text="@string/delivery_address" />
+
+                <ImageView
+                    android:layout_width="18dip"
+                    android:layout_height="18dip"
+                    android:layout_marginRight="3dip"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/director_icon" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/devider_line4" />
+
+            <LinearLayout
+                android:id="@+id/workbench_category_password_update_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="38dip"
+                android:background="@drawable/workbench_category_bottombg"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/workbench_category_point" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dip"
+                    android:text="@string/update_password" />
+
+                <ImageView
+                    android:layout_width="18dip"
+                    android:layout_height="18dip"
+                    android:layout_marginRight="3dip"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/director_icon" />
+            </LinearLayout>
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

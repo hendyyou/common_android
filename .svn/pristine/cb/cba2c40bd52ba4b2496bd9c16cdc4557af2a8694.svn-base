@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="307dip"
+              android:layout_height="28dip"
+              android:gravity="center_vertical"
+              android:paddingRight="10dip"
+              android:paddingLeft="10dip"
+              android:background="@drawable/workw">
+    <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="28dip"
+            android:paddingLeft="20dip"
+            android:layout_weight="1.0"
+            android:gravity="left|center"
+            android:text="@string/pending_payment_orders"/>
+
+    <ImageView
+            android:layout_width="8dip"
+            android:layout_height="13dip"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/director_icon"/>
+</LinearLayout>

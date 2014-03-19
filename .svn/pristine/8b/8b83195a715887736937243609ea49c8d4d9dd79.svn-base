@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/splash_bottom" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/login_linghting"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="163dip"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_login" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_username_ll"
+            android:layout_width="270dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dip"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/username_et"
+                android:layout_width="270dip"
+                android:layout_height="38dip"
+                android:background="@drawable/login_input_box_background"
+                android:hint="@string/username_hint"
+                android:singleLine="true"
+                android:textColor="@color/glass_green"
+                android:textColorHint="@color/glass_green"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/password_et"
+                android:layout_width="270dip"
+                android:layout_height="38dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/login_input_box_background"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/glass_green"
+                android:textColorHint="@color/glass_green"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/remember_password_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dip"
+                android:button="@drawable/btn_check"
+                android:gravity="center"
+                android:text="@string/remember_password"
+                android:textColor="@color/white" />
+
+            <ImageButton
+                android:id="@+id/login_ibtn"
+                android:layout_width="202dip"
+                android:layout_height="36dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/login_btn_selector" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

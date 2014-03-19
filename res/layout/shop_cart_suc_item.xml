@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dip"
+    android:layout_marginRight="6dip"
+    android:layout_marginTop="15dip"
+    android:background="@drawable/rounded_background"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/shop_cart_suc_item_id"
+        style="@style/shop_cart_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dip" />
+
+    <TextView
+        android:id="@+id/shop_cart_suc_item_fail_msg"
+        style="@style/shop_cart_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="6dip"
+        />
+
+    <LinearLayout
+        android:id="@+id/shop_cart_suc_item_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:layout_marginTop="3dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/shop_cart_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_number" />
+
+            <TextView
+                android:id="@+id/shop_cart_suc_item_num"
+                style="@style/shop_cart_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:layout_marginTop="3dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/shop_cart_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_status" />
+
+            <TextView
+                android:id="@+id/shop_cart_suc_item_pay_type"
+                style="@style/shop_cart_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:layout_marginTop="3dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/shop_cart_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pay_money_count" />
+
+            <TextView
+                android:id="@+id/shop_cart_suc_item_money"
+                style="@style/shop_cart_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dip"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/shop_cart_suc_item_pay_btn"
+                style="@style/Button_background"
+                android:layout_width="94dip"
+                android:layout_margin="4dip"
+                android:gravity="center"
+                android:text="@string/pay_on_line" />
+
+            <Button
+                android:id="@+id/shop_cart_suc_item_pro_btn"
+                style="@style/Button_background"
+                android:layout_width="94dip"
+                android:layout_margin="4dip"
+                android:gravity="center"
+                android:text="@string/look_order" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backgroud_color"
+    android:orientation="vertical" >
+
+    <com.digione.zgb2b.widget.TitleView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/porduct_sort_group"
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:layout_marginTop="6dip"
+        android:background="@drawable/product_sort_buttombg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/brief_rb"
+            style="@style/AppBaseTheme"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/sail_descselector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/product_profile" />
+
+        <RadioButton
+            android:id="@+id/config_rb"
+            style="@style/AppBaseTheme"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/sail_descselector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/product_specification" />
+
+        <RadioButton
+            android:id="@+id/cunsult_rb"
+            style="@style/AppBaseTheme"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/sail_descselector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/product_consulting" />
+    </RadioGroup>
+
+    <ScrollView
+        android:id="@+id/brief_scv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/product_brief_ly"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroud_color"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/product_consult_ly"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroud_color"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+</LinearLayout>

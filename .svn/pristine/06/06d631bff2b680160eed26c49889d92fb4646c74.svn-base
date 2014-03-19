@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#e9e1d6"
+    android:orientation="vertical" >
+
+    <com.digione.zgb2b.widget.TitleView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/product_sort_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dip"
+        android:background="@drawable/product_sort_buttombg"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/product_sail_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/product_sort_btn"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/sail_rb"
+                style="@style/AppBaseTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:text="@string/sort_sail" />
+
+            <ImageView
+                android:id="@+id/sail_arrow"
+                android:layout_width="12.67dp"
+                android:layout_height="12.67dp"
+                android:src="@drawable/desc_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/product_price_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="1dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/price_rb"
+                style="@style/AppBaseTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:text="@string/sort_price" />
+
+            <ImageView
+                android:id="@+id/price_arrow"
+                android:layout_width="12.67dp"
+                android:layout_height="12.67dp"
+                android:src="@drawable/asc_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/product_time_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="1dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/time_rb"
+                style="@style/AppBaseTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:text="@string/sort_time" />
+
+            <ImageView
+                android:id="@+id/time_arrow"
+                android:layout_width="12.67dp"
+                android:layout_height="12.67dp"
+                android:src="@drawable/desc_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/backgroud_color"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/MyListView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dip"
+            android:fadingEdgeLength="0dip" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

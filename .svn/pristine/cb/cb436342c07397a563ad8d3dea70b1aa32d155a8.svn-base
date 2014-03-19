@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/tabhost_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/tabhost_home_imagebutton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/home_tab_selector"
+            android:contentDescription="@string/main_fragment_home" />
+
+        <ImageButton
+            android:id="@+id/tabhost_product_imagebutton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/product_tab_selector"
+            android:contentDescription="@string/main_fragment_product" />
+
+        <RelativeLayout
+            android:id="@+id/tabhost_shoppingcart_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shopcart_tab_selector"
+            android:baselineAligned="false" >
+
+            <TextView
+                android:id="@+id/tab_host_cart_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="4dip"
+                android:background="@drawable/sc_num"
+                android:gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/tabhost_workbench_imagebutton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/workbench_selector"
+            android:contentDescription="@string/main_fragment_workbench" />
+
+        <ImageButton
+            android:id="@+id/tabhost_more_imagebutton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/more_tab_selector"
+            android:contentDescription="@string/main_fragment_more" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 品牌类别_companys_false  false表示只有一级子菜单，而true表示存在多级子菜单 -->
+    <string-array name="classify">
+        <item>产品品牌_companys_false</item>       
+        <item>终端配饰_MSattachment_false</item>
+        <item>消费群体_customers_false</item>
+        <item>网络制式_nettype_false</item>
+        <item>主显示屏_screen_false</item>
+        <item>零售价格_marketprice_false</item>
+        <item>终端补贴_msrefund_false</item>
+    </string-array>
+    <!-- 产品筛选一级菜单 -->
+    <string-array name="select_classify">
+        <item>产品品牌_companys_2</item>
+        <item>操作系统_inteloperationsystem_16</item>
+        <item>网络制式_nettype_4</item>
+        <item>主显示屏_screen_14,15</item>
+        <item>芯片平台_intelplatform_18</item>
+        <item>零售价格_marketprice_9,10</item>
+        <item>消费群体_customers_13</item>
+        <item>补贴模式_msrefund_17</item>
+    </string-array>
+    <string-array name="select_classify_accessory">
+        <item>产品品牌_companysaccessory_2</item>
+        <item>配饰类型_accessorytype_8</item>
+    </string-array>
+    <string-array name="companys">
+        <item>全部_head-1--------0-99999----0-590----2-rankingsale-desc</item>
+        <item>百度云_head-1-448-------0-99999----0-590----2-marketTime-desc</item>
+        <item>三星_head-1-254-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>摩托罗拉_head-1-312-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>LG_head-1-311-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>HTC_head-1-362-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>诺基亚_head-1-253-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>苹果_head-1-375-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>夏普_head-1-360-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>华为_head-1-299-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>中兴_head-1-310-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>酷派_head-1-291-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>联想_head-1-303-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>语信_head-1-374-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>广信_head-1-297-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>天元_head-1-328-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>同威_head-1-368-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>星宇_head-1-357-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>金派_head-1-367-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>全盈_head-1-376-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>本为_head-1-372-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>蓝天_head-1-314-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>海信_head-1-305-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>海尔_head-1-204-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>葳朗_head-1-361-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>华录_head-1-329-------0-99999----0-590----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="companysaccessory">
+        <item>全部_accessory-2--------0-99999---------2-marketTime-desc</item>
+        <item>三星_accessory-2-254-------0-99999---------2-marketTime-desc</item>
+        <item>摩托罗拉_accessory-2-312-------0-99999---------2-marketTime-desc</item>
+        <item>HTC_accessory-2-362-------0-99999---------2-marketTime-desc</item>
+        <item>华为_accessory-2-299-------0-99999---------2-marketTime-desc</item>
+        <item>联想_accessory-2-303-------0-99999---------2-marketTime-desc</item>
+        <item>中兴_accessory-2-310-------0-99999---------2-marketTime-desc</item>
+        <item>酷派_accessory-2-291-------0-99999---------2-marketTime-desc</item>
+        <item>蓝天_accessory-2-314-------0-99999---------2-marketTime-desc</item>
+        <item>至尊宝_accessory-2-438-------0-99999---------2-marketTime-desc</item>
+        <item>全盈_accessory-2-376-------0-99999---------2-marketTime-desc</item>
+        <item>同威_accessory-2-368-------0-99999---------2-marketTime-desc</item>
+        <item>语信_accessory-2-374-------0-99999---------2-marketTime-desc</item>
+        <item>本为_accessory-2-372-------0-99999---------2-marketTime-desc</item>
+        <item>天语_accessory-2-252-------0-99999---------2-marketTime-desc</item>
+        <item>易丰_accessory-2-292-------0-99999---------2-marketTime-desc</item>
+        <item>博瑞_accessory-2-405-------0-99999---------2-marketTime-desc</item>
+        <item>金立_accessory-2-432-------0-99999---------2-marketTime-desc</item>
+        <item>中维恒泰_accessory-2-430-------0-99999---------2-marketTime-desc</item>
+        <item>华录_accessory-2-329-------0-99999---------2-marketTime-desc</item>
+        <item>天元_accessory-2-328-------0-99999---------2-marketTime-desc</item>
+        <item>海信_accessory-2-305-------0-99999---------2-marketTime-desc</item>
+        <item>优思_accessory-2-364-------0-99999---------2-marketTime-desc</item>
+        <item>广信_accessory-2-297-------0-99999---------2-marketTime-desc</item>
+    </string-array>
+    <string-array name="accessorytype">
+        <item>全部_accessory-2--------0-99999---------2-marketTime-desc</item>
+        <item>充电器_accessory-2-------128-0-99999---------2-marketTime-desc</item>
+        <item>电池_accessory-2-------129-0-99999---------2-marketTime-desc</item>
+        <item>普通耳机_accessory-2-------130-0-99999---------2-marketTime-desc</item>
+        <item>蓝牙耳机_accessory-2-------131-0-99999---------2-marketTime-desc</item>
+        <item>数据线_accessory-2-------132-0-99999---------2-marketTime-desc</item>
+        <item>存储卡_accessory-2-------133-0-99999---------2-marketTime-desc</item>
+        <item>读卡器_accessory-2-------134-0-99999---------2-marketTime-desc</item>
+        <item>触屏保护膜_accessory-2-------135-0-99999---------2-marketTime-desc</item>
+        <item>手写笔_accessory-2-------136-0-99999---------2-marketTime-desc</item>
+        <item>手机保护外壳_accessory-2-------137-0-99999---------2-marketTime-desc</item>
+        <item>音箱_accessory-2-------138-0-99999---------2-marketTime-desc</item>
+        <item>其他_accessory-2-------139-0-99999---------2-marketTime-desc</item>        
+        </string-array>
+    <string-array name="intelphone">
+        <item>产品品牌_intelcompany</item>
+        <item>操作系统_inteloperationsystem</item>
+        <item>主显示屏_intelscreen</item>
+        <item>网络制式_intelnettype</item>
+        <item>零售价格_intelmarketprice</item>
+        <item>芯片平台_intelplatform</item>
+    </string-array>
+    <string-array name="intelcompany">
+        <item>三星_intelligent-1-254-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>摩托罗拉_intelligent-1-312-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>HTC_intelligent-1-362-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>华为_intelligent-1-299-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>酷派_intelligent-1-291-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>中兴_intelligent-1-310-------0-99999----0-590----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="inteloperationsystem">
+        <item>全部_intelligent-1--------0-99999----0-590----2-rankingsale-desc</item>
+        <item>Android 2.1_intelligent-1--------0-99999----0-590-383---2-rankingsale-desc</item>
+        <item>Android 2.2_intelligent-1--------0-99999----0-590-384---2-rankingsale-desc</item>
+        <item>Android 2.3_intelligent-1--------0-99999----0-590-385---2-rankingsale-desc</item>
+        <item>苹果IOS_intelligent-1--------0-99999----0-590-386---2-rankingsale-desc</item>
+        <item>Windows_intelligent-1--------0-99999----0-590-396---2-rankingsale-desc</item>
+        <item>Bada_intelligent-1--------0-99999----0-590-397---2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="intelscreen">
+        <item>2.6英寸-3.0英寸_intelligent-1--------0-99999----26-30----2-rankingsale-desc</item>
+        <item>3.0英寸-3.5英寸_intelligent-1--------0-99999----30-35----2-rankingsale-desc</item>
+        <item>3.8英寸-4.7英寸_intelligent-1--------0-99999----38-47----2-rankingsale-desc</item>
+        <item>5英寸以上_intelligent-1--------0-99999----50-590----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="intelnettype">
+        <item>3G智能(CDMA EVDO)_intelligent-1---124-----0-99999----0-590----2-rankingsale-desc</item>
+        <item>3G智能(EVDO/GSM)_intelligent-1---353-----0-99999----0-590----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="intelmarketprice">
+        <item>0-999元_intelligent-1--------0-999----0-590----2-rankingsale-desc</item>
+        <item>1000-1999元_intelligent-1--------1000-1999----0-590----2-rankingsale-desc</item>
+        <item>2000-2999元_intelligent-1--------2000-2999----0-590----2-rankingsale-desc</item>
+        <item>3000元以上_intelligent-1--------3000-99999----0-590----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="intelplatform">
+        <item>全部_intelligent-1--------0-99999----0-590----2-rankingsale-desc</item>
+        <item>高通_intelligent-1--------0-99999----0-590---391-2-rankingsale-desc</item>
+        <item>威盛_intelligent-1--------0-99999----0-590---392-2-rankingsale-desc</item>
+        <item>其它_intelligent-1--------0-99999----0-590---393-2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="functionphone">
+        <item>产品品牌_functioncompany</item>
+        <item>主显示屏_functionscreen</item>
+        <item>网络制式_functionnettype</item>
+        <item>零售价格_functionmarketprice</item>
+        <item>芯片平台_functionplatform</item>
+    </string-array>
+    <string-array name="functioncompany">
+        <item>三星_function-1-254-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>华为_function-1-299-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>酷派_function-1-291-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>中兴_function-1-310-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>同威_function-1-368-------0-99999----0-590----2-rankingsale-desc</item>
+        <item>星宇_function-1-357-------0-99999----0-590----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="functionscreen">
+        <item>2.0英寸以下_function-1--------0-99999----0-20----2-rankingsale-desc</item>
+        <item>2.2英寸-2.4英寸_function-1--------0-99999----22-24----2-rankingsale-desc</item>
+        <item>2.6英寸-3.0英寸_function-1--------0-99999----26-30----2-rankingsale-desc</item>
+        <item>3.0英寸-3.5英寸_function-1--------0-99999----30-35----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="functionnettype">
+        <item>2G(CDMA 1X)_function-1---121-----0-99999----0-590----2-rankingsale-desc</item>
+        <item>2G(CDMA/GSM)_function-1---238-----0-99999----0-590----2-rankingsale-desc</item>
+        <item>3G(CDMA EVDO)_function-1---123-----0-99999----0-590----2-rankingsale-desc</item>
+        <item>3G(EVDO/GSM)_function-1---120-----0-99999----0-590----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="functionmarketprice">
+        <item>0-299元_function-1--------0-299----0-590----2-rankingsale-desc</item>
+        <item>300-399元_function-1--------300-399----0-590----2-rankingsale-desc</item>
+        <item>400-599元_function-1--------400-599----0-590----2-rankingsale-desc</item>
+        <item>600元以上_function-1--------600-99999----0-590----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="functionplatform">
+        <item>高通_function-1--------0-99999----0-590---391-2-rankingsale-desc</item>
+        <item>威盛_function-1--------0-99999----0-590---392-2-rankingsale-desc</item>
+        <item>其它_function-1--------0-99999----0-590---393-2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="MSattachment">
+        <item>全部_accessory-2--------0-99999---------2-rankingsale-desc</item>
+        <item>充电器_accessory-2-------128-0-99999---------2-rankingsale-desc</item>
+        <item>电池_accessory-2-------129-0-99999---------2-rankingsale-desc</item>
+        <item>普通耳机_accessory-2-------130-0-99999---------2-rankingsale-desc</item>
+        <item>蓝牙耳机_accessory-2-------131-0-99999---------2-rankingsale-desc</item>
+        <item>数据线_accessory-2-------132-0-99999---------2-rankingsale-desc</item>
+        <item>存储卡_accessory-2-------133-0-99999---------2-rankingsale-desc</item>
+        <item>读卡器_accessory-2-------134-0-99999---------2-rankingsale-desc</item>
+        <item>触屏保护膜_accessory-2-------135-0-99999---------2-rankingsale-desc</item>
+        <item>手写笔_accessory-2-------136-0-99999---------2-rankingsale-desc</item>
+        <item>手机保护外壳_accessory-2-------137-0-99999---------2-rankingsale-desc</item>
+        <item>音箱_accessory-2-------138-0-99999---------2-rankingsale-desc</item>
+        <item>其他_accessory-2-------139-0-99999---------2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="customers">
+        <item>全部_head-1--------0-99999----0-590----2-rankingsale-desc</item>
+        <item>时尚人群_head-1--------0-99999---198-0-590----2-rankingsale-desc</item>
+        <item>商务人士_head-1--------0-99999---199-0-590----2-rankingsale-desc</item>
+        <item>工薪阶层_head-1--------0-99999---210-0-590----2-rankingsale-desc</item>
+        <item>学生_head-1--------0-99999---197-0-590----2-rankingsale-desc</item>
+        <item>女性_head-1--------0-99999---192-0-590----2-rankingsale-desc</item>
+        <item>老人_head-1--------0-99999---193-0-590----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="nettype">
+        <item>全部_function-1--------0-99999----0-590----2-rankingsale-desc</item>
+        <item>2G(CDMA 1X)_function-1---121-----0-99999----0-590----2-rankingsale-desc</item>
+        <item>2G(CDMA/GSM)_function-1---238-----0-99999----0-590----2-rankingsale-desc</item>
+        <item>3G(CDMA EVDO)_function-1---123-----0-99999----0-590----2-rankingsale-desc</item>
+        <item>3G(EVDO/GSM)_function-1---120-----0-99999----0-590----2-rankingsale-desc</item>
+        <item>智能(CDMA EVDO)_intelligent-1---124-----0-99999----0-590----2-rankingsale-desc</item>
+        <item>智能(EVDO/GSM)_intelligent-1---353-----0-99999----0-590----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="screen">
+        <item>全部_head-1--------0-99999----0-590----2-rankingsale-desc</item>
+        <item>2.0英寸以下_head-1--------0-99999----0-20----2-rankingsale-desc</item>
+        <item>2.2英寸-2.4英寸_head-1--------0-99999----22-24----2-rankingsale-desc</item>
+        <item>2.6英寸-3.0英寸_head-1--------0-99999----26-30----2-rankingsale-desc</item>
+        <item>3.0英寸-3.5英寸_head-1--------0-99999----30-35----2-rankingsale-desc</item>
+        <item>3.8英寸-4.7英寸_head-1--------0-99999----38-47----2-rankingsale-desc</item>
+        <item>5英寸以上_head-1--------0-99999----50-590----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="marketprice">
+        <item>全部_head-1--------0-99999----0-590----2-rankingsale-desc</item>
+        <item>0-299元_head-1--------0-299----0-590----2-rankingsale-desc</item>
+        <item>300-399元_head-1--------300-399----0-590----2-rankingsale-desc</item>
+        <item>400-599元_head-1--------400-599----0-590----2-rankingsale-desc</item>
+        <item>600-999元_head-1--------600-999----0-590----2-rankingsale-desc</item>
+        <item>1000-1999元_head-1--------1000-1999----0-590----2-rankingsale-desc</item>
+        <item>2000-2999元_head-1--------2000-2999----0-590----2-rankingsale-desc</item>
+        <item>3000元以上_head-1--------3000-99999----0-590----2-rankingsale-desc</item>
+    </string-array>
+    <string-array name="msrefund">
+        <item>全部_head-1--------0-99999----0-590----2-rankingsale-desc</item>
+        <item>无补贴_head-1--------0-99999----0-590--1--2-rankingsale-desc</item>
+        <item>终端补贴_head-1--------0-99999----0-590--2--2-rankingsale-desc</item>
+        <item>话费补贴_head-1--------0-99999----0-590--3--2-marketTime-desc</item>
+    </string-array>
+   <string-array name="my_direct_supply">
+        <item>全部订单</item>
+        <item>待付款订单</item>
+        <item >我的收藏</item>
+        <item >收货地址</item>
+        <item >修改密码</item>
+    </string-array>
+    <string-array name="feedback_type">
+        <item>功能意见</item>
+        <item>您的新需求 </item>
+        <item>操作意见</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="product_profile">
+        <item>上市时间</item>
+        <item>零售价</item>
+        <item>直供价</item>
+        <item>主要功能</item>
+        <item>支持业务</item>
+        <item>售后服务</item>
+        <item>产品属性</item>
+    </string-array>
+    <!-- 规格组名 手机和终端配件 -->
+    <string-array name="product_specification_phone">
+        <item>手机产品类别</item>
+        <item>手机外观设计</item>
+        <item>手机基本特性</item>
+        <item>手机基本功能</item>
+        <item>手机标准配置</item>
+        <item>手机多媒体娱乐</item>
+        <item>手机数据功能</item>
+        <item>手机个人助理</item>
+        <item>手机特色功能</item>
+    </string-array>
+    <string-array name="product_specification_attch">
+         <item>规格参数</item>
+        </string-array>
+    <string-array name="my_baigong_myself">
+        <item >我的收藏</item>
+        <item >收货地址</item>
+    </string-array>
+    <string-array name="isdefault">
+        <item>是</item>
+        <item>否</item>
+    </string-array>
+    
+</resources>

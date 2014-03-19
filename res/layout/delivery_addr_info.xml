@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/delivery_address_theme"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroud_color"
+    android:fillViewport="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/delivery_address_theme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.digione.zgb2b.widget.TitleView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <ListView
+            android:id="@+id/workbench_delivery_info_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:layout_marginTop="10dip"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/transparent"
+            android:dividerHeight="1dip"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dip" >
+        </ListView>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip" >
+
+            <TableRow
+                android:layout_marginTop="10dip"
+                android:gravity="left" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/consignee"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/workbench_delivery_consigneed_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dip"
+                    android:layout_column="1"
+                    android:layout_span="2"
+                    android:background="@drawable/input_box_background"
+                    android:maxLength="30"
+                    android:minLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color"
+                    android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dip"
+                android:gravity="left" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/consignee_mobile"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/workbench_modify_delivery_moible_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dip"
+                    android:layout_column="1"
+                    android:layout_span="2"
+                    android:background="@drawable/input_box_background"
+                    android:maxLength="30"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color"
+                    android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dip"
+                android:gravity="left" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dip"
+                    android:gravity="right"
+                    android:paddingTop="10dip"
+                    android:text="@string/consignee_address"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="115dip"
+                    android:layout_height="34dip"
+                    android:layout_gravity="left|center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/workbench_delivery_province_btn"
+                        style="@style/delivery_address_theme"
+                        android:layout_width="70dip"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/unmodify"
+                        android:enabled="false"
+                        android:text="@string/provinceName"
+                        android:textColor="@color/font_color" />
+
+                    <Button
+                        android:layout_width="35dip"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/dropdown_right"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="115dip"
+                    android:layout_height="34dip"
+                    android:layout_gravity="right|center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/workbench_delivery_city_btn"
+                        style="@style/delivery_address_theme"
+                        android:layout_width="70dip"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/dropcolor"
+                        android:text="@string/please_select"
+                        android:textColor="@color/font_color" />
+
+                    <Button
+                        android:id="@+id/workbench_delivery_city_btn2"
+                        android:layout_width="35dip"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/drop_select_background"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="115dip"
+                android:layout_marginTop="10dip"
+                android:gravity="left" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="34dip"
+                    android:layout_column="1"
+                    android:layout_gravity="left|center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/workbench_delivery_county_btn"
+                        style="@style/delivery_address_theme"
+                        android:layout_width="70dip"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/dropcolor"
+                        android:gravity="center"
+                        android:text="@string/please_select"
+                        android:textColor="@color/font_color" />
+
+                    <Button
+                        android:id="@+id/workbench_delivery_county_btn2"
+                        android:layout_width="35dip"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/drop_select_background"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dip"
+                android:gravity="left" >
+
+                <EditText
+                    android:id="@+id/workbench_delivery_detailed_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dip"
+                    android:layout_column="1"
+                    android:layout_span="2"
+                    android:background="@drawable/input_box_background"
+                    android:maxLength="60"
+                    android:minLines="1"
+                    android:textColor="@color/font_color"
+                    android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dip"
+                android:gravity="left" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/warehouse"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/workbench_delivery_warehouse_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dip"
+                    android:layout_column="1"
+                    android:layout_span="2"
+                    android:background="@drawable/input_box_background"
+                    android:minLines="1"
+                    android:textColor="@color/font_color"
+                    android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dip"
+                android:gravity="left" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_column="0"
+                    android:gravity="right|center"
+                    android:text="@string/logistics_business"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="121dip"
+                    android:layout_height="34dip"
+                    android:layout_column="1"
+                    android:layout_gravity="left|center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/workbench_delivery_logistics_business_btn"
+                        android:layout_width="70dip"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/dropcolor"
+                        android:gravity="center"
+                        android:text="@string/please_select"
+                        android:textColor="@color/font_color"
+                        android:textSize="13sp" />
+
+                    <Button
+                        android:id="@+id/workbench_delivery_logistics_business_btn2"
+                        android:layout_width="35dip"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/drop_select_background"
+                        android:gravity="center" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:gravity="left" >
+
+                <Button
+                    android:id="@+id/workbench_delivery_update_btn"
+                    style="@style/Button_background"
+                    android:layout_column="1"
+                    android:layout_marginRight="10dip"
+                    android:text="@string/modify" />
+
+                <Button
+                    android:id="@+id/workbench_delivery_add_btn"
+                    style="@style/Button_background"
+                    android:layout_column="2"
+                    android:layout_marginRight="10dip"
+                    android:text="@string/new_add" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</ScrollView>

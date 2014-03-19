@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/search_hot_words"
+        android:layout_width="fill_parent"
+        android:layout_height="35dip"
+        android:background="@drawable/graybuttom_selector"
+        android:clickable="false"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:textColor="#763015" >
+    </Button>
+
+</LinearLayout>

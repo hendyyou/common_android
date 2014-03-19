@@ -1,0 +1,538 @@
+package com.digione.zgb2b.utils;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentManager.BackStackEntry;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
+
+import com.digione.zgb2b.R;
+import com.digione.zgb2b.ZGApplication;
+import com.digione.zgb2b.common.Constants;
+import com.digione.zgb2b.common.Constants.ArgName;
+import com.digione.zgb2b.common.Constants.MsgCode;
+import com.digione.zgb2b.fragment.SimpleMainFragment;
+import com.digione.zgb2b.fragment.home.HomeFragment;
+import com.digione.zgb2b.fragment.home.WebFragment;
+import com.digione.zgb2b.fragment.more.AboutFragment;
+import com.digione.zgb2b.fragment.more.FeedbackFragment;
+import com.digione.zgb2b.fragment.more.HotLineFragment;
+import com.digione.zgb2b.fragment.more.MoreFragment;
+import com.digione.zgb2b.fragment.more.SearchFragment;
+import com.digione.zgb2b.fragment.product.ConsultSubmitFragment;
+import com.digione.zgb2b.fragment.product.ProductBriefFragment;
+import com.digione.zgb2b.fragment.product.ProductClassyFragment;
+import com.digione.zgb2b.fragment.product.ProductDetailFragment;
+import com.digione.zgb2b.fragment.product.ProductGalleryFragment;
+import com.digione.zgb2b.fragment.product.ProductListFragment;
+import com.digione.zgb2b.fragment.product.ProductPhoneAllFragment;
+import com.digione.zgb2b.fragment.shopcart.*;
+import com.digione.zgb2b.fragment.shopcart.ShopCartConfigFragment;
+import com.digione.zgb2b.fragment.workbench.DeliveryAddressFragment;
+import com.digione.zgb2b.fragment.workbench.MyDirectSupplyFragment;
+import com.digione.zgb2b.fragment.workbench.OrdersDetailFragment;
+import com.digione.zgb2b.fragment.workbench.OrdersFragment;
+import com.digione.zgb2b.fragment.workbench.PasswordUpdateFragment;
+import com.digione.zgb2b.fragment.workbench.UserLoginFragment;
+
+public class ChangeFragmentUtil {
+
+	// 为每一个Fragment标识一个对应ID
+
+	/**
+	 * 整个工程的首要添加到simple_fragment的Fragment，全工程创建一次
+	 */
+	public static final int SIMPLE_FRAGMENT = 999;
+
+	/**
+	 * Fragment的Bundle参数名：FRAGMENT_BUNDLE_TAG_NAME
+	 */
+	public static final String FRAGMENT_BUNDLE_TAG_NAME = "FRAGMENT_BUNDLE_TAG_NAME";
+
+	/**
+	 * 首页模块ID为100-199，变量名使用HOME_开头
+	 */
+	// 首页
+	public static final int HOME_CLASSIFY = 100;
+	// 首页公告
+	public static final int HOME_WEB = 101;
+
+	/**
+	 * 产品模块ID为200-299，变量名使用PRODUCT_开头
+	 */
+	// 产品首页
+	public static final int PRODUCT_CLASSIFY = 200;
+	// 产品-手机界面
+	public static final int PRODUCT_PHONE = 201;
+	// 产品-产品列表界面
+	public static final int PRODUCT_LIST = 202;
+	// 产品详情页
+	public static final int PRODUCT_DETAIL = 203;
+	// 商品大图浏览界面
+	public static final int PRODUCT_IMAGESWITCHER = 204;
+	// 简介、规格、咨询
+	public static final int PRODUCT_BRIEF = 205;
+	// 提交咨询的界面
+	public static final int PRODUCT_CONSULT_SUBMIT = 206;
+
+	/**
+	 * 购物车模块ID为300-399，变量名使用SHOPPINGCART_开头
+	 */
+	// 购物车首页
+	public static final int SHOPPINGCART_CLASSIFY = 301;
+	// 购物车渠道
+	public static final int SHOPPINGCART_CHANNEL = 302;
+	// 去结算
+	public static final int SHOPPINGCART_ACOUNT = 303;
+	// 购物车生成订单成功
+	public static final int SHOPPINGCART_ORDER_SUC = 304;
+	// 购物车里没有采购
+	public static final int SHOPPINGCART_NO_NOMAL = 305;
+
+	/**
+	 * 我的直供模块ID为400-499，变量名使用WORKBENCH_开头
+	 */
+	// 我的直供首页
+	public static final int WORKBENCH_CLASSIFY = 400;
+	// 所有订单
+	public static final int WORKBENCH_ALL_ORDERS = 401;
+	// 待付款
+	public static final int WORKBENCH_PENDING_PAYMENT_ORDERS = 402;
+	// 待收货
+	public static final int WORKBENCH_PENDING_RECEIVING_ORDERS = 403;
+	// 我的收藏
+	public static final int WORKBENCH_MY_FAVORITES = 404;
+	// 修改密码
+	public static final int WORKBENCH_UPDATE_PASSWORD = 405;
+	// 收货地址
+	public static final int WORKBENCH_RECEIVING_ADDRESS = 406;
+	// 订单详细
+	public static final int WORKBENCH_ORDER_DETAIL = 407;
+	// 登录
+	public static final int WORKBENCH_USER_LOGIN = 408;
+
+	/**
+	 * 更多模块ID为500-599，变量名使用MORE_开头
+	 */
+	// 更多首页
+	public static final int MORE_CLASSIFY = 500;
+	// 搜索
+	public static final int MORE_SEARCH = 501;
+	// 近期浏览
+	public static final int MORE_RECENT_RECODER = 502;
+	// 客服电话
+	public static final int MORE_CUSTOMER_HOTLINE = 503;
+	// 意见反馈
+	public static final int MORE_FEEDBACK = 504;
+	// 关于
+	public static final int MORE_ABOUT = 505;
+	// 退出
+	public static final int MORE_EXIT = 506;
+
+	/**
+	 * 当前Fragment的Tag
+	 */
+	private static String currentFragmentTag;
+
+	/**
+	 * MainActivity的Handler
+	 */
+	private static Handler mainActivityHandler;
+
+	/**
+	 * 需要进行清空回退栈到SimpleMainFragment的FragmentTag定义
+	 */
+	private static final String[] clearPopBackStackFragmentTags = { HomeFragment.class.getSimpleName(),
+			ProductClassyFragment.class.getSimpleName(), ShopCartFragement.class.getSimpleName(),
+			ShopCartNoNormalFragment.class.getSimpleName(), MyDirectSupplyFragment.class.getSimpleName(),
+			MoreFragment.class.getSimpleName() };
+
+	/**
+	 * 需要进行隐藏Tab的FragmentTag定义
+	 */
+	private static final String[] hideTabViewFragmentTags = { UserLoginFragment.class.getSimpleName(),
+			ProductGalleryFragment.class.getSimpleName() };
+
+	private ChangeFragmentUtil() {
+		// 什么都不处理
+	}
+
+	/**
+	 * 实例化需要加载的Fragment
+	 * 
+	 * @param flag
+	 * @param bundle
+	 * @return
+	 */
+	private static Fragment initFragment(int flag, Bundle bundle) {
+		Fragment newFragment = null;
+		switch (flag) {
+		case SIMPLE_FRAGMENT:
+			newFragment = new SimpleMainFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, SimpleMainFragment.class.getSimpleName());
+			break;
+
+		// 各个tab的首页fragment定义
+		case HOME_CLASSIFY:
+			newFragment = new HomeFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, HomeFragment.class.getSimpleName());
+			break;
+		case PRODUCT_CLASSIFY:
+			newFragment = new ProductClassyFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, ProductClassyFragment.class.getSimpleName());
+			break;
+		case SHOPPINGCART_CLASSIFY:
+			newFragment = new ShopCartFragement();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, ShopCartFragement.class.getSimpleName());
+			break;
+		case SHOPPINGCART_NO_NOMAL:
+			newFragment = new ShopCartNoNormalFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, ShopCartNoNormalFragment.class.getSimpleName());
+			break;
+		case WORKBENCH_CLASSIFY:
+			newFragment = new MyDirectSupplyFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, MyDirectSupplyFragment.class.getSimpleName());
+			break;
+		case MORE_CLASSIFY:
+			newFragment = new MoreFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, MoreFragment.class.getSimpleName());
+			break;
+
+		// 首页tab的fragment定义
+		case HOME_WEB:
+			newFragment = new WebFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, WebFragment.class.getSimpleName());
+			break;
+
+		// 产品导购tab的fragment定义
+		case PRODUCT_PHONE:
+			newFragment = new ProductPhoneAllFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, ProductPhoneAllFragment.class.getSimpleName());
+			break;
+		case PRODUCT_LIST:
+			newFragment = new ProductListFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, ProductListFragment.class.getSimpleName());
+			break;
+		case PRODUCT_DETAIL:
+			newFragment = new ProductDetailFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, ProductDetailFragment.class.getSimpleName());
+			break;
+		case PRODUCT_IMAGESWITCHER:
+			newFragment = new ProductGalleryFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, ProductGalleryFragment.class.getSimpleName());
+			break;
+		case PRODUCT_BRIEF:
+			newFragment = new ProductBriefFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, ProductBriefFragment.class.getSimpleName());
+			break;
+		case PRODUCT_CONSULT_SUBMIT:
+			newFragment = new ConsultSubmitFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, ConsultSubmitFragment.class.getSimpleName());
+			break;
+
+		// 购物车tab的fragment定义
+		case SHOPPINGCART_CHANNEL:
+			newFragment = new ShopCartChannelFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, ShopCartChannelFragment.class.getSimpleName());
+			break;
+		case SHOPPINGCART_ACOUNT:
+			newFragment = new ShopCartConfigFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, ShopCartConfigFragment.class.getSimpleName());
+			break;
+		case SHOPPINGCART_ORDER_SUC:
+			newFragment = new ShopCartOrderFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, ShopCartOrderFragment.class.getSimpleName());
+			break;
+
+		// 我的直供tab的fragment定义
+		case WORKBENCH_ALL_ORDERS:
+			newFragment = new OrdersFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, OrdersFragment.class.getSimpleName());
+			break;
+		case WORKBENCH_PENDING_PAYMENT_ORDERS:
+			newFragment = new OrdersFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, OrdersFragment.class.getSimpleName());
+			break;
+		case WORKBENCH_ORDER_DETAIL:
+			newFragment = new OrdersDetailFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, OrdersDetailFragment.class.getSimpleName());
+			break;
+		case WORKBENCH_UPDATE_PASSWORD:
+			newFragment = new PasswordUpdateFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, PasswordUpdateFragment.class.getSimpleName());
+			break;
+		case WORKBENCH_RECEIVING_ADDRESS:
+			newFragment = new DeliveryAddressFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, DeliveryAddressFragment.class.getSimpleName());
+			break;
+
+		// 登录的fragment定义
+		case WORKBENCH_USER_LOGIN:
+			newFragment = new UserLoginFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, UserLoginFragment.class.getSimpleName());
+			break;
+
+		// 更多tab的fragment定义
+		case MORE_SEARCH:
+			newFragment = new SearchFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, SearchFragment.class.getSimpleName());
+			break;
+		case MORE_CUSTOMER_HOTLINE:
+			newFragment = new HotLineFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, HotLineFragment.class.getSimpleName());
+			break;
+		case MORE_FEEDBACK:
+			newFragment = new FeedbackFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, FeedbackFragment.class.getSimpleName());
+			break;
+		case MORE_ABOUT:
+			newFragment = new AboutFragment();
+			bundle.putString(FRAGMENT_BUNDLE_TAG_NAME, AboutFragment.class.getSimpleName());
+			break;
+
+		default:
+			break;
+		}
+		if (null != newFragment) {
+			newFragment.setArguments(bundle);
+		}
+		return newFragment;
+	}
+
+	/**
+	 * @param targetFragmentId
+	 *            即将启动的fragment数组
+	 * @param tobeReplaceId
+	 *            即将被替换的fragment数组
+	 * @param allowtoBack
+	 *            是否允许回退
+	 * @param bundle
+	 *            携带的必要参数
+	 */
+	private static void changeFragment(int targetFragmentId, int tobeReplaceId, boolean allowtoBack, Bundle bundle) {
+		if (null == bundle) {
+			bundle = new Bundle();
+		}
+		// 获取 FragmentManager 实例
+		FragmentManager fManager = ZGApplication.getInstance().getFragmentManager();
+		FragmentTransaction ft = fManager.beginTransaction();
+		ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+		Fragment newFragments = initFragment(targetFragmentId, bundle);
+		currentFragmentTag = bundle.getString(FRAGMENT_BUNDLE_TAG_NAME);
+		if (ZGApplication.isDevMode()) {
+			Log.d("changeframgement", "changeFragment:" + targetFragmentId + " currentFragmentTag:" + currentFragmentTag);
+		}
+		boolean isSimpleFound = false;
+		boolean isNeedClearPopBackStack = false;
+		for (int i = 0; i < clearPopBackStackFragmentTags.length; i++) {
+			if (clearPopBackStackFragmentTags[i].equals(currentFragmentTag)) {
+				isNeedClearPopBackStack = true;
+				break;
+			}
+		}
+		if (isNeedClearPopBackStack && ZGApplication.isCanClearPopBackStack()) {
+			// 判断是否添加过SimpleMainFragment
+			int backStackCount = fManager.getBackStackEntryCount();
+			for (int i = backStackCount - 1; i >= 0; i--) {
+				BackStackEntry backStackEntry = fManager.getBackStackEntryAt(i);
+				if (SimpleMainFragment.class.getSimpleName().equals(backStackEntry.getName())) {
+					isSimpleFound = true;
+					break;
+				}
+			}
+			// 清空回退栈到SimpleMainFragment
+			if (ZGApplication.isDevMode()) {
+				Log.d("changeframgement", "tag:" + currentFragmentTag + " popBackStack count:" + backStackCount);
+			}
+			fManager.popBackStack(SimpleMainFragment.class.getSimpleName(), 0);
+		}
+		ft.replace(tobeReplaceId, newFragments, currentFragmentTag);
+		if (allowtoBack) {
+			if (SimpleMainFragment.class.getSimpleName().equals(currentFragmentTag)) {
+				if (!isSimpleFound) {
+					ft.addToBackStack(currentFragmentTag);
+				}
+			} else {
+				ft.addToBackStack(currentFragmentTag);
+			}
+		}
+		ft.commit();
+	}
+
+	/**
+	 * 切换界面
+	 * 
+	 * @param targetFragmentId
+	 *            要切换到的界面ID
+	 * @param bundle
+	 *            当前的界面需要的dundle参数
+	 */
+	public static void changeFragment(int targetFragmentId, Bundle bundle) {
+		changeFragment(targetFragmentId, R.id.simple_fragment, true, bundle);
+	}
+
+	/**
+	 * 返回上一个界面
+	 */
+	public static void removeFragment() {
+		FragmentManager fManager = ZGApplication.getInstance().getFragmentManager();
+		FragmentTransaction ft = fManager.beginTransaction();
+		fManager.popBackStack();
+		ft.commit();
+	}
+
+	/**
+	 * 切换到登录界面
+	 * 
+	 * @param currentFragmetId
+	 *            当前的界面ID
+	 * @param context
+	 *            界面的context
+	 * @param msg
+	 *            提示消息，null为不提示
+	 * @param bundle
+	 *            当前的界面需要的dundle参数
+	 */
+	public static void changeToUserLoginFragment(int currentFragmetId, Context context, String msg, Bundle bundle) {
+		if (null != msg && !"".equals(msg)) {
+			ToastUtil.showToast(context, msg, ToastUtil.LENGTH_SHORT);
+		}
+		if (null == bundle) {
+			bundle = new Bundle();
+		}
+		bundle.putInt(ArgName.UserLogin.FRAGMENT_ID, currentFragmetId);
+		ZGApplication.getInstance().setLogin(false);
+		ZGApplication.getInstance().setUser(null);
+		ZGApplication.getInstance().setResetShopCart(false);
+		changeFragment(WORKBENCH_USER_LOGIN, R.id.simple_fragment, true, bundle);
+	}
+
+	/**
+	 * 刷新当前的Fragment的Tag
+	 * 
+	 * @return
+	 */
+	public static String refreshFragmentTag() {
+		FragmentManager fManager = ZGApplication.getInstance().getFragmentManager();
+		int backStackCount = fManager.getBackStackEntryCount();
+		if (backStackCount > 0) {
+			BackStackEntry backStackEntry = fManager.getBackStackEntryAt(backStackCount - 1);
+			if (null != backStackEntry) {
+				String tempTagString = backStackEntry.getName();
+				if (null != tempTagString && !"".equals(tempTagString)) {
+					currentFragmentTag = tempTagString;
+					if (ZGApplication.isDevMode()) {
+						Log.d("changeframgement", "refreshFragmentTag currentFragmentTag:" + tempTagString);
+					}
+				}
+			}
+		}
+		refreshTabVisibility();
+
+		return currentFragmentTag;
+	}
+
+	public static String getCurrentFragmentTag() {
+		return currentFragmentTag;
+	}
+
+	public static void setMainActivityHandler(Handler mainActivityHandler) {
+		ChangeFragmentUtil.mainActivityHandler = mainActivityHandler;
+	}
+
+	public static void refreshTabVisibility() {
+		if (!SimpleMainFragment.class.getSimpleName().equals(currentFragmentTag)) {
+			boolean isHideFragmentTag = false;
+			for (int i = 0; i < hideTabViewFragmentTags.length; i++) {
+				if (hideTabViewFragmentTags[i].equals(currentFragmentTag)) {
+					isHideFragmentTag = true;
+					break;
+				}
+			}
+			if (isHideFragmentTag) {
+				hideTabView();
+			} else {
+				showTabView();
+			}
+		}
+	}
+
+	/**
+	 * 显示TabHost
+	 */
+	public static void showTabView() {
+		if (null != mainActivityHandler) {
+			mainActivityHandler.sendEmptyMessage(MsgCode.SHOW_TAB);
+		}
+	}
+
+	/**
+	 * 隐藏TabHost
+	 */
+	public static void hideTabView() {
+		if (null != mainActivityHandler) {
+			mainActivityHandler.sendEmptyMessage(MsgCode.HIDE_TAB);
+		}
+	}
+
+	/**
+	 * 模拟点击首页的Tab
+	 */
+	public static void performHomeTabClick() {
+		if (null != mainActivityHandler) {
+			mainActivityHandler.sendEmptyMessage(MsgCode.HOME_CLICK);
+		}
+	}
+
+	/**
+	 * 模拟点击导购的Tab
+	 */
+	public static void performProductTabClick() {
+		if (null != mainActivityHandler) {
+			mainActivityHandler.sendEmptyMessage(MsgCode.PRODUCT_CLICK);
+		}
+	}
+
+	/**
+	 * 模拟点击购物车的Tab
+	 */
+	public static void performShopCartTabClick() {
+		if (null != mainActivityHandler) {
+			mainActivityHandler.sendEmptyMessage(MsgCode.SHOPPINGCART_CLICK);
+		}
+	}
+
+	/**
+	 * 模拟点击直供的Tab
+	 */
+	public static void performWorkBenchTabClick() {
+		if (null != mainActivityHandler) {
+			mainActivityHandler.sendEmptyMessage(MsgCode.WORKBENCH_CLICK);
+		}
+	}
+
+	/**
+	 * 模拟点击更多的Tab
+	 */
+	public static void performMoreTabClick() {
+		if (null != mainActivityHandler) {
+			mainActivityHandler.sendEmptyMessage(MsgCode.MORE_CLICK);
+		}
+	}
+
+	public static void clearPopBackStack(String tagName) {
+		if (ZGApplication.isDevMode()) {
+			Log.d(Constants.TAG, "clearPopBackStack() tagName:" + tagName);
+		}
+		FragmentManager fManager = ZGApplication.getInstance().getFragmentManager();
+		if (null == tagName) {
+			tagName = SimpleMainFragment.class.getSimpleName();
+			fManager.popBackStack(tagName, 0);
+		} else {
+			fManager.popBackStack(tagName, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+		}
+	}
+}
